@@ -19,6 +19,7 @@
 
 ### Variables:
 - snake_case variables
+- Use underscores at the beginning of variables to make them private
 - CONSTANT_CASE constants
 - PascalCase for enum names and CONSTANT_CASE for their members, as they are constants
 - Booleans start with “is” or “has”
@@ -30,7 +31,7 @@
 ### Folders:
 
 ### Files:
-- snake_case (linux had some issues with capital file names?)
+- PascalCase (linux had some issues with capital file names?)
 
 ### Classes:
 - PascalCase (it's an object)
@@ -97,8 +98,9 @@ var direction := Vector3(1, 2, 3) # The type is clearly inferred as Vector3.
 
 ## GENERAL CODING PRACICES
 
-- never set properties of a node directly from code, especially player / core objects.  (player.velocity = 100 from another script is never allowed.)
-
+- Never set properties of a node from a different node, especially player / core objects.  (player.velocity = 100 from another script is never allowed.)
+- Each node/scene should be able to run by itself without causing a runtime exception.
+- Use setters/getters instead of setting/getting a property directly
 
 
 
